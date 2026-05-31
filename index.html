@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بدر للكهرباء والطاقة الشمسية | الرئيسية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <span class="logo-icon">⚡</span>
+                    <span>بدر للكهرباء</span>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="active">الرئيسية</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                    <li><button class="login-btn" id="loginBtn">تسجيل الدخول</button></li>
+                </ul>
+                <div class="mobile-menu" id="mobileMenu">☰</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- User Dashboard (hidden by default) -->
+    <div class="user-dashboard" id="userDashboard">
+        <p id="userNameDisplay">مرحباً</p>
+        <button id="logoutBtn">تسجيل الخروج</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>⚡ بدر للكهرباء والطاقة الشمسية ⚡</h1>
+        <p>حلول كهربائية متكاملة وتركيب أنظمة الطاقة الشمسية للمنازل والمنشآت التجارية</p>
+        <div class="cta-buttons">
+            <a href="services.html" class="btn btn-primary">استكشف خدماتنا</a>
+            <a href="contact.html" class="btn btn-outline">تواصل معنا</a>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services" id="services">
+        <h2 class="section-title">خدماتنا الرئيسية</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🔌</div>
+                <h3>تمديدات كهربائية منزلية</h3>
+                <p>تركيب وتمديد كامل للأنظمة الكهربائية في المنازل والفلل بأعلى معايير الجودة والسلامة</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">☀️</div>
+                <h3>تركيب الطاقة الشمسية</h3>
+                <p>تصميم وتركيب أنظمة الطاقة الشمسية لتوفير فاتورة الكهرباء وحماية البيئة</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>صيانة وإصلاح</h3>
+                <p>خدمات صيانة دورية وإصلاح الأعطال الكهربائية بسرعة واحترافية</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2 class="section-title">لماذا تختارنا؟</h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <i class="fas fa-certificate"></i>
+                <h3>خبرة 10+ سنوات</h3>
+                <p>سنوات من الخبرة في مجال الكهرباء والطاقة الشمسية</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-shield-alt"></i>
+                <h3>ضمان شامل</h3>
+                <p>ضمان على جميع الأعمال والتركيبات لمدة تصل إلى 5 سنوات</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-bolt"></i>
+                <h3>سرعة التنفيذ</h3>
+                <p>إنجاز المشاريع في الوقت المحدد بدقة عالية</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>أسعار تنافسية</h3>
+                <p>أفضل الأسعار مع الحفاظ على أعلى معايير الجودة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Preview -->
+    <section class="contact" id="contact">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>تواصل معنا الآن</h3>
+                <div class="contact-item">
+                    <i class="fas fa-user"></i>
+                    <span>المهندس: بدر</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>05384352801</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@bader-electric.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>نخدم جميع مناطق المملكة العربية السعودية</span>
+                </div>
+            </div>
+            <div class="contact-form">
+                <div class="success-msg" id="successMsg">
+                    ✅ تم إرسال رسالتك بنجاح! سنتواصل معك قريباً
+                </div>
+                <form id="contactForm">
+                    <input type="text" placeholder="الاسم الكامل" required>
+                    <input type="tel" placeholder="رقم الجوال" required>
+                    <input type="email" placeholder="البريد الإلكتروني">
+                    <textarea placeholder="وصف الخدمة المطلوبة..." required></textarea>
+                    <button type="submit">إرسال الطلب</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>⚡ بدر للكهرباء والطاقة الشمسية ⚡ | جميع الحقوق محفوظة 2024</p>
+        <p>📞 05384352801 | المملكة العربية السعودية</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2>🔐 تسجيل الدخول</h2>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="البريد الإلكتروني" required>
+                <input type="password" id="loginPassword" placeholder="كلمة المرور" required>
+                <button type="submit">دخول</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem; color: #666;">
+                <small>للتجربة: أدخل أي بريد وكلمة مرور</small>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

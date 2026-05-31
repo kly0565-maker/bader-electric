@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدماتنا | بدر للكهرباء والطاقة الشمسية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .service-detail {
+            background: var(--white);
+            padding: 4rem 2rem;
+        }
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .service-detail-card {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 2rem;
+            border-right: 5px solid var(--secondary);
+        }
+        .service-detail-card h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .service-detail-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .service-detail-card ul li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .service-detail-card ul li::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: bold;
+        }
+        .pricing {
+            background: var(--primary);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 2rem auto 0;
+        }
+        .pricing-card {
+            background: var(--white);
+            color: var(--dark);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s;
+        }
+        .pricing-card:hover {
+            transform: scale(1.05);
+        }
+        .pricing-card h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        .price {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        .price span {
+            font-size: 1rem;
+            color: var(--dark);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <span class="logo-icon">⚡</span>
+                    <span>بدر للكهرباء</span>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="services.html" class="active">خدماتنا</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                    <li><button class="login-btn" id="loginBtn">تسجيل الدخول</button></li>
+                </ul>
+                <div class="mobile-menu" id="mobileMenu">☰</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- User Dashboard -->
+    <div class="user-dashboard" id="userDashboard">
+        <p id="userNameDisplay">مرحباً</p>
+        <button id="logoutBtn">تسجيل الخروج</button>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>⚡ خدماتنا المتميزة ⚡</h1>
+        <p>نقدم حلولاً كهربائية شاملة وتركيب أنظمة الطاقة الشمسية بأعلى معايير الجودة</p>
+    </section>
+
+    <!-- Services Detail -->
+    <section class="service-detail">
+        <h2 class="section-title">تفاصيل خدماتنا</h2>
+        <div class="service-detail-grid">
+            <div class="service-detail-card">
+                <h3>🔌 تمديدات كهربائية منزلية</h3>
+                <ul>
+                    <li>تمديد كامل للفلل والمنازل</li>
+                    <li>تركيب لوحات التوزيع الكهربائية</li>
+                    <li>تأسيس نقاط الإنارة والمفاتيح</li>
+                    <li>تركيب المكيفات والأجهزة الكهربائية</li>
+                    <li>فحص واختبار الأنظمة الكهربائية</li>
+                    <li>ترخيص من الكهرباء السعودية</li>
+                </ul>
+            </div>
+            <div class="service-detail-card">
+                <h3>☀️ أنظمة الطاقة الشمسية</h3>
+                <ul>
+                    <li>تصميم نظام طاقة شمسية مخصص</li>
+                    <li>تركيب الألواح الشمسية</li>
+                    <li>تركيب العاكسات (Inverters)</li>
+                    <li>تركيب بطاريات التخزين</li>
+                    <li>ربط مع شبكة الكهرباء</li>
+                    <li>صيانة دورية للأنظمة</li>
+                </ul>
+            </div>
+            <div class="service-detail-card">
+                <h3>🔧 صيانة وإصلاح</h3>
+                <ul>
+                    <li>إصلاح الأعطال الكهربائية الطارئة</li>
+                    <li>صيانة دورية للأنظمة الكهربائية</li>
+                    <li>تبديل الأسلاك التالفة</li>
+                    <li>ترقية الأنظمة القديمة</li>
+                    <li>فحص أمان شامل</li>
+                    <li>خدمة 24 ساعة للطوارئ</li>
+                </ul>
+            </div>
+            <div class="service-detail-card">
+                <h3>🏢 خدمات تجارية</h3>
+                <ul>
+                    <li>تمديدات للمحلات والمكاتب</li>
+                    <li>تركيب أنظمة الإضاءة التجارية</li>
+                    <li>أنظمة الطاقة الشمسية للشركات</li>
+                    <li>تركيب كاميرات المراقبة</li>
+                    <li>أنظمة الإنذار والسلامة</li>
+                    <li>عقود صيانة سنوية</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing">
+        <h2 class="section-title" style="color: white;">💰 باقات الأسعار</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>باقة الأساسية</h3>
+                <div class="price">500 <span>ريال</span></div>
+                <p>فحص كهربائي شامل + تقرير فني</p>
+                <p>✓ مناسب للمنازل الصغيرة</p>
+            </div>
+            <div class="pricing-card">
+                <h3>باقة المنزل</h3>
+                <div class="price">2,500 <span>ريال</span></div>
+                <p>تمديد كامل لمنزل 3 غرف</p>
+                <p>✓ شامل المواد والتركيب</p>
+            </div>
+            <div class="pricing-card">
+                <h3>باقة الطاقة الشمسية</h3>
+                <div class="price">8,000 <span>ريال</span></div>
+                <p>نظام 5 كيلو واط كامل</p>
+                <p>✓ شامل التركيب والضمان</p>
+            </div>
+        </div>
+        <p style="margin-top: 2rem; opacity: 0.9;">📞 للاستفسار والأسعار المخصصة: 05384352801</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>⚡ بدر للكهرباء والطاقة الشمسية ⚡ | جميع الحقوق محفوظة 2024</p>
+        <p>📞 05384352801 | المملكة العربية السعودية</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2>🔐 تسجيل الدخول</h2>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="البريد الإلكتروني" required>
+                <input type="password" id="loginPassword" placeholder="كلمة المرور" required>
+                <button type="submit">دخول</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem; color: #666;">
+                <small>للتجربة: أدخل أي بريد وكلمة مرور</small>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا | بدر للكهرباء والطاقة الشمسية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .contact-section {
+            padding: 4rem 2rem;
+            background: var(--white);
+        }
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .contact-info-box {
+            background: var(--primary);
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 15px;
+        }
+        .contact-info-box h2 {
+            color: var(--secondary);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            width: 40px;
+        }
+        .info-item div strong {
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .contact-form-box {
+            background: var(--light);
+            padding: 3rem;
+            border-radius: 15px;
+        }
+        .contact-form-box h2 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: var(--secondary);
+            color: var(--white);
+            border: none;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.3s;
+        }
+        .submit-btn:hover {
+            transform: scale(1.02);
+        }
+        .map-section {
+            padding: 4rem 2rem;
+            background: var(--light);
+            text-align: center;
+        }
+        .map-section h2 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+        .map-placeholder {
+            background: var(--white);
+            padding: 4rem;
+            border-radius: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 3px dashed var(--primary);
+        }
+        .map-placeholder i {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <span class="logo-icon">⚡</span>
+                    <span>بدر للكهرباء</span>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="contact.html" class="active">تواصل معنا</a></li>
+                    <li><button class="login-btn" id="loginBtn">تسجيل الدخول</button></li>
+                </ul>
+                <div class="mobile-menu" id="mobileMenu">☰</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- User Dashboard -->
+    <div class="user-dashboard" id="userDashboard">
+        <p id="userNameDisplay">مرحباً</p>
+        <button id="logoutBtn">تسجيل الخروج</button>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>📞 تواصل معنا</h1>
+        <p>نحن هنا لمساعدتك! تواصل معنا للحصول على استشارة مجانية</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-wrapper">
+            <div class="contact-info-box">
+                <h2>معلومات التواصل</h2>
+                <div class="info-item">
+                    <i class="fas fa-user-tie"></i>
+                    <div>
+                        <strong>المهندس المسؤول</strong>
+                        <span>بدر</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>رقم الجوال</strong>
+                        <span>05384352801</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>البريد الإلكتروني</strong>
+                        <span>info@bader-electric.com</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>ساعات العمل</strong>
+                        <span>السبت - الخميس: 8 ص - 8 م</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>مناطق الخدمة</strong>
+                        <span>جميع مناطق المملكة العربية السعودية</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-tools"></i>
+                    <div>
+                        <strong>خدمة الطوارئ</strong>
+                        <span>متاحة 24 ساعة</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-box">
+                <h2>📝 أرسل طلبك</h2>
+                <div class="success-msg" id="successMsg">
+                    ✅ تم إرسال رسالتك بنجاح! سنتواصل معك خلال 24 ساعة
+                </div>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل *</label>
+                        <input type="text" id="name" placeholder="أدخل اسمك الكامل" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">رقم الجوال *</label>
+                        <input type="tel" id="phone" placeholder="05xxxxxxxx" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" placeholder="example@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">نوع الخدمة *</label>
+                        <select id="service" required>
+                            <option value="">اختر نوع الخدمة</option>
+                            <option value="electrical">تمديدات كهربائية منزلية</option>
+                            <option value="solar">تركيب طاقة شمسية</option>
+                            <option value="maintenance">صيانة وإصلاح</option>
+                            <option value="commercial">خدمات تجارية</option>
+                            <option value="consultation">استشارة فنية</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">تفاصيل الطلب *</label>
+                        <textarea id="message" placeholder="صف لنا احتياجاتك بالتفصيل..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">إرسال الطلب</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <h2>📍 نخدم جميع مناطق المملكة</h2>
+        <div class="map-placeholder">
+            <i class="fas fa-map-marked-alt"></i>
+            <h3>نخدم جميع مدن المملكة العربية السعودية</h3>
+            <p>الرياض - جدة - الدمام - مكة - المدينة - وكل المدن السعودية</p>
+            <p style="margin-top: 1rem; color: var(--secondary); font-weight: bold;">
+                📞 للطوارئ: 05384352801
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>⚡ بدر للكهرباء والطاقة الشمسية ⚡ | جميع الحقوق محفوظة 2024</p>
+        <p>📞 05384352801 | المملكة العربية السعودية</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2>🔐 تسجيل الدخول</h2>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="البريد الإلكتروني" required>
+                <input type="password" id="loginPassword" placeholder="كلمة المرور" required>
+                <button type="submit">دخول</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem; color: #666;">
+                <small>للتجربة: أدخل أي بريد وكلمة مرور</small>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
